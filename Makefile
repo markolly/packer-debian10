@@ -13,7 +13,7 @@ install:
 
 packer:
 	@echo "Starting packer build(s)..."
-	@packer build -var "version_tag=${version}" debian9.json
+	@packer build -var "version_tag=${version}" debian10.json
 
 start:
 	@echo "Start VM(s)..."
@@ -25,7 +25,7 @@ clean:
 
 prune:
 	@echo "Deleting VM image..."
-	@vagrant box remove file://builds/virtualbox-debian9.box
+	@vagrant box remove file://builds/virtualbox-debian10.box
 
 help:
 	@echo "the help menu"
